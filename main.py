@@ -214,7 +214,7 @@ def scrape_nfl(name, nfl, type, type_len, printing):
 
         return stats2
 
-def nba_predict_points(name, nfl):
+def nba_predict_points(name, nba):
     urls = "https://sportsbook.draftkings.com/leagues/basketball/nba?category=player-props&subcategory=points"
 
     page = requests.get(urls)
@@ -259,7 +259,7 @@ def nba_predict_points(name, nfl):
 
     if is_prediction:
 
-        data = scrape_nba(name.upper(), nfl, "game log", "all", False)
+        data = scrape_nba(name.upper(), nba, "game log", "all", False)
 
         points_data = data["PTS"]
 
